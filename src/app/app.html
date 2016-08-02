@@ -1,0 +1,9 @@
+<div class="container ghub-wrapper">
+	<search-form (onUserNameEntered)="onUserNameEntered($event)"></search-form>
+	<repos-list [list]="repoList" *ngIf="repoList && !notification"></repos-list>
+	<div *ngIf="notification"
+		 [class.ghub-error]="notification.messageType === MessageType.Error"
+		 [class.ghub-warning]="notification.messageType === MessageType.Warning">
+		{{notification.message}}
+	</div>
+</div>

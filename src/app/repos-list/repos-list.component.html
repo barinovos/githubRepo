@@ -1,0 +1,9 @@
+<ul class="collection">
+	<li class="collection-item avatar" *ngFor="let item of list">
+		<img [attr.src]="item.owner.avatar_url" alt="" class="circle responsive-img">
+		<span class="title">{{item.owner.login}}</span>
+		<p>
+			<a [attr.href]="item.html_url">{{item.name}}</a>
+		</p>
+	</li>
+</ul>

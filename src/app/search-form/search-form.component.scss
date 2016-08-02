@@ -1,0 +1,26 @@
+@import '~materialize-css/sass/components/color';
+
+$error-color: color('red', 'base');
+
+// Overrides for 'ng-invalid' instead of just 'invalid'
+.ng-touched {
+  // Invalid Input Style
+  &.ng-invalid,
+  &:focus.ng-invalid {
+    border-bottom: $error-color;
+    box-shadow: 0 1px 0 0 $error-color;
+  }
+
+  // Custom Error message
+  &.ng-invalid + label:after,
+  &:focus.ng-invalid + label:after {
+    color: $error-color;
+    content: attr(data-error);
+    opacity: 1;
+  }
+
+  &.ng-invalid + label,
+  &:focus.ng-invalid + label {
+    color: $error-color;
+  }
+}

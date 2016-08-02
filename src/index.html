@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base href="<%= webpackConfig.metadata.baseUrl %>">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title><%= webpackConfig.metadata.title %></title>
+
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+<div>
+	<app></app>
+</div>
+
+<% if (webpackConfig.metadata.ENV === 'development') { %>
+<!-- Webpack Dev Server reload -->
+<script src="/webpack-dev-server.js"></script>
+<% } %>
+</body>
+</html>
